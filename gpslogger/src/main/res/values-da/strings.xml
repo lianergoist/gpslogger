@@ -6,6 +6,7 @@
     <string name="settings_screen_name">GPSLogger indstillinger</string>
     <string name="ok">Ok</string>
     <string name="cancel">Annuller</string>
+    <string name="hide">Skjul</string>
     <string name="could_not_write_to_file">Kunne ikke skrive til fil</string>
     <string name="add_description">Tilføje en beskrivelse</string>
     <string name="letters_numbers">Brug kun bogstaver og tal</string>
@@ -16,6 +17,7 @@
     <string name="txt_latitude">Bredegrad:</string>
     <string name="txt_longitude">Længdegrad:</string>
     <string name="txt_altitude">Højde:</string>
+    <string name="txt_speed_kph">Hastighed (i km/t)</string>
     <string name="txt_speed">Hastighed:</string>
     <string name="txt_direction">Retning:</string>
     <string name="txt_satellites">Satellitter:</string>
@@ -36,9 +38,11 @@
     <!-- general -->
     <string name="foot"> fod</string>
     <string name="feet"> fod</string>
+    <string name="meter">&#160;meter</string>
     <string name="meters"> meter</string>
     <string name="error">Fejl</string>
     <string name="error_connection">Forbindelsesfejl. Kontrollere dine telefonindstillinger.</string>
+    <string name="minutes">&#160;min</string>
     <string name="hours">t</string>
     <string name="gpsprovider_unavailable">Ingen GPS-udbyder tilgængelig. Tjek venligst dine placeringsindstillinger og aktivér en placeringsudbyder.
     </string>
@@ -46,8 +50,11 @@
     <string name="providername_gps">GPS-satellitter</string>
     <string name="providername_celltower">mobilmaster</string>
     <string name="not_applicable">ikke tilgængelig</string>
+    <string name="feet_per_second">&#160;ft/s</string>
     <string name="miles_per_hour"> mi/t</string>
+    <string name="miles">&#160;mi</string>
     <string name="kilometers_per_hour"> km/t</string>
+    <string name="kilometers">&#160;km</string>
     <string name="unknown_direction">ukendt</string>
     <string name="sorry">Beklager</string>
     <string name="success">Udført</string>
@@ -76,6 +83,7 @@
     <string name="time_halfhour">½ time</string>
     <string name="time_oneandhalfhours">1½ timer</string>
     <string name="time_twoandhalfhours">2½ timer</string>
+    <string name="time_hms_format">%sh %sm %ss</string>
     <string name="accuracy_within" formatted="false">inden for %s %s</string>
     <!-- Settings activity -->
     <string name="settings_distance_in_meters">Afstand i meter</string>
@@ -90,11 +98,13 @@
     <string name="log_kml_title">Log til KML</string>
     <string name="log_kml_summary">Logger placeringer til en KML v2.2 fil</string>
     <string name="log_plain_text_title">Log til CSV</string>
+    <string name="log_plain_text_decimal_comma">Brug komma (,) som decimalseparator i stedet for punkt (.)</string>
     <string name="log_plain_text_summary">Logger placeringer til en CSV-fil</string>
     <string name="log_json_title">Log til GeoJSON</string>
     <string name="log_json_summary">Logger placeringer til en GeoJSON-fil</string>
     <string name="new_file_creation_title">Ny filoprettelse</string>
     <string name="new_file_creation_summary">Om der skal oprettes en ny fil dagligt eller ved hver opstart.</string>
+    <string name="new_file_creation_onceamonth">En gang om måneden</string>
     <string name="new_file_creation_onceaday">Dagligt</string>
     <string name="new_file_creation_everystart">Ved hver opstart</string>
     <string name="new_file_creation_custom">Tilpasset fil</string>
@@ -105,6 +115,7 @@
     <string name="pref_performance_title">Ydeevne</string>
     <string name="pref_performance_summary">Tidsindstillinger, filtre og lyttere</string>
     <string name="time_before_logging_title">Logningsinterval</string>
+    <string name="time_before_logging_summary">Brug 0 for maksimal frekvens, men langsommere er bedre for batterilevetiden. Batterikonfiguration på systemniveau kan tilsidesætte denne indstilling. Se Hjælp og ofte stillede spørgsmål.</string>
     <string name="time_before_logging_dialog_title">Tid i sekunder</string>
     <string name="time_before_logging_hint">Angiv sekunder (maks. 9999)</string>
     <string name="keep_fix_summary">Benyt med omtanke, da dette vil reducere batteritiden drastisk. Benyt kun for større         
@@ -128,6 +139,7 @@ præcision ved lavere frekvenser.    </string>
     <string name="autoemail_smtp_category">E-mail-indstillinger</string>
     <string name="autoemail_username_summary">Brugernavn hos din e-mail-udbyder</string>
     <string name="autoemail_password_summary">Adgangskode til din e-mail-udbyder</string>
+    <string name="autoemail_ssl">Altid SSL</string>
     <string name="autoemail_ssl_summary">Prøv at skifte dette, hvis du ikke kan oprette forbindelse</string>
     <string name="autoemail_choosepreset">E-mail-udbyder</string>
     <string name="autoemail_choosepreset_summary">Vælg en udbyder eller angiv manuelt</string>
@@ -157,24 +169,29 @@ præcision ved lavere frekvenser.    </string>
     <string name="pref_logging_summary">Filtyper, oprettelse og navngivning</string>
     <string name="pref_general_title">Generelle indstillinger</string>
     <string name="pref_general_summary">Opstarts- og visningsindstillinger</string>
+    <string name="emailprovider_msn">Windows Live Mail</string>
     <string name="emailprovider_manual">Manuelt</string>
-    <string name="dropbox_authorize_description">For at benytte Dropbox-funktioner skal du tillade GPSLogger at uploade 
+    <string name="dropbox_setup_title">Dropbox</string>
+    <string name="dropbox_authorize_description">For at benytte Dropbox-funktioner skal du tillade GPSLogger at uploade
        filer til din konto.
     </string>
     <string name="dropbox_unauthorize_description">Du er godkendt af Dropbox. Filer uploadedes til
         \'Apps\\GPSLogger for Android\'. Du kan fjerne GPSLoggers tilknytning til Dropbox, hvis du ønsker det.
     </string>
     <string name="dropbox_couldnotauthorize">Kunne ikke godkende med Dropbox, forsøg venligst igen senere</string>
+    <string name="owncloud_setup_title">ownCloud</string>
     <string name="owncloud_server_summary">ownCloud basis-URL</string>
     <string name="owncloud_directory_summary">Mappe at benytte på ownCloud-server. Tjek at den findes, ellers mislykkes upload.</string>
     <string name="owncloud_test_summary">Upload en testfil til ownCloud-serveren</string>
     <string name="owncloud_testing">Tester ownCloud-upload</string>
+    <string name="menu_upload">Upload</string>
     <string name="autoemail_from">Fra adresse</string>
     <string name="autoemail_from_summary">Visse e-mail-udbydere kræver en fra-adresse. Benyt kun, hvis du har behov for det.    </string>
     <string name="google_drive_clearauthorization_summary">Glemmer lokalindstillinger for Google Drev. For permanent at tilbagekalde adgang, gå til Google-kontoindstillinger</string>
     <string name="google_drive_setup_title">Google Drev</string>
     <string name="google_drive_test_summary">Upload en testfil til Google Drev</string>
     <string name="google_drive_test_title">Test af upload</string>
+    <string name="google_drive_folder_path_summary_2">Hvis du bruger et enkelt mappenavn, kan det flyttes et andet sted i Google Drev efter oprettelsen. Mappestier er langsommere, fordi hver del af stien skal kontrolleres eller oprettes, før filer uploades.</string>
     <string name="google_drive_testupload_success">Uploadet. Se venligst efter en ny fil i dine Google Dokumenter.</string>
     <string name="autoemail_sendto_csv">Kommaseparerede e-mails</string>
     <string name="autosend_enabled">Tillad auto-afsendelse</string>
@@ -191,10 +208,13 @@ præcision ved lavere frekvenser.    </string>
     <string name="summary_autosend">Auto-afsendelse:</string>
     <string name="pref_autosend_title">Auto-afsendelse, e-mail og upload</string>
     <string name="pref_autosend_summary">E-mail, deling og upload-muligheder</string>
+    <string name="shortcut_stop">Stop</string>
     <string name="shortcut_pickaction">Vælg en handling</string>
     <string name="log_opengts_title">Logfør til OpenGTS-server</string>
     <string name="log_opengts_summary">Send GPRMC-data til en online OpenGTS-server.</string>
+    <string name="opengts_setup_title">OpenGTS</string>
     <string name="autoopengts_server_category">OpenGTS-indstillinger</string>
+    <string name="autoopengts_server">Server</string>
     <string name="autoopengts_server_summary">Værtsnavn eller IP</string>
     <string name="opengts_server_communication_method">Kommunikationsmetode</string>
     <string name="opengts_server_communication_method_summary">HTTP- eller Raw Socket-baseret kommunikation</string>
@@ -204,10 +224,13 @@ præcision ved lavere frekvenser.    </string>
     <string name="autoftp_username">Brugernavn</string>
     <string name="autoftp_password">Adgangskode</string>
     <string name="autoftp_advanced_settings">Avancerede Indstillinger</string>
+    <string name="autoftp_port">Port</string>
     <string name="autoftp_useftps">Benyt FTPS</string>
     <string name="autoftp_useftps_summary">Aktivér FTP via SSL. SSL/TLS og implicitte ignoreres, hvis denne er inaktiv.</string>
+    <string name="autoftp_ssltls">SSL/TLS</string>
     <string name="autoftp_ssltls_summary">Ingen, SSL eller TLS. Benyt Ingen ved almindelige, ikke-sikrede forbindelser.</string>
     <string name="autoftp_ssltls_none">Ingen</string>
+    <string name="autoftp_ssltls_tls">TLS</string>
     <string name="autoftp_implicit">Implicit FTP via SSL</string>
     <string name="autoftp_test_summary">Upload en testfil til FTP-serveren</string>
     <string name="autoftp_testing">Tester FTP-upload</string>
@@ -217,6 +240,7 @@ præcision ved lavere frekvenser.    </string>
     </string>
     <string name="menu_faq">Hjælp og FAQ</string>
     <string name="log_customurl_title">Log til tilpasset URL</string>
+    <string name="log_customurl_setup_title">Brugerdefineret URL</string>
     <string name="log_customurl_summary">Send logningsinfo til din egen server via HTTP</string>
     <string name="txt_annotation">Anmærkning:</string>
     <string name="txt_time_isoformat">Tid UTC (2011-12-25T15:27:33Z):</string>
@@ -303,4 +327,20 @@ præcision ved lavere frekvenser.    </string>
     <string name="txt_starttimestamp_epoch">Starttidsstemplet (epoch)</string>
     <string name="txt_battery">Batteri</string>
     <string name="customurl_http_body">HTTP Samling</string>
+    <string name="seconds">&#160;s</string>
+    <string name="meters_per_second">&#160;m/s</string>
+    <string name="log_plain_text_csv_advanced_title">Log til CSV indstillinger</string>
+    <string name="log_plain_text_csv_field_delimiter">CVS-felt adskiller</string>
+    <string name="retry_get_best_possible_accuracy_title">Vælg den bedste nøjagtighed i varighed</string>
+    <string name="retry_get_best_possible_accuracy_summary">I stedet for at logge det første nøjagtige punkt, skal appen fortsætte med at prøve for nøjagtighedens varighed og vælge det punkt med den bedste nøjagtighed. Tager længere tid, men øger chancerne for mere præcise point.</string>
+    <string name="osm_setup_title">OpenStreetMap</string>
+    <string name="emailprovider_google">Google Mail</string>
+    <string name="emailprovider_yahoo">Yahoo! Mail</string>
+    <string name="google_drive_folder_path">Google Drive mappesti</string>
+    <string name="google_drive_folder_path_summary_1">Brug et enkelt mappenavn (f.eks. GPSLogger) eller en mappesti (f.eks. aaa/bbb/ccc). Mapperne skal oprettes af denne applikation.</string>
+    <string name="shortcut_start">Start</string>
+    <string name="autoftp_ssltls_ssl">SSL</string>
+    <string name="autoftp_setup_title">FTP</string>
+    <string name="log_customurl_summary_detailed">Sender en anmodning til den brugerdefinerede URL, hver gang et lokationspunkt fanges. Afhænger af logningsintervallet.</string>
+    <string name="autosend_customurl_summary">(Denne funktion muliggør CSV-logning) Sender anmodninger i bulk til den brugerdefinerede URL, en for hver linje i CSV-filen. Afhænger af intervallet for automatisk afsendelse.</string>
 </resources>
